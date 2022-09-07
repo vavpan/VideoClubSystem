@@ -92,7 +92,7 @@ public class IssueMovies extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("ABeeZee", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel2.setText("Issue Books");
+        jLabel2.setText("Issue Movies");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
