@@ -1,4 +1,4 @@
-package libraryjavatuto;
+package videoclub;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -83,6 +83,7 @@ public class Movies extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         DeleteBtn1 = new javax.swing.JButton();
         FilterBtn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -268,6 +269,9 @@ public class Movies extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setForeground(new java.awt.Color(255, 102, 102));
+        jLabel8.setText("*To add a movie first refresh and then add the fields");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -301,9 +305,15 @@ public class Movies extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(479, 479, 479)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8)
+                        .addGap(61, 61, 61))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 22, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1044, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -332,7 +342,9 @@ public class Movies extends javax.swing.JFrame {
                                 .addComponent(jLabel9))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel3)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel3))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BCover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
@@ -463,7 +475,9 @@ public class Movies extends javax.swing.JFrame {
     }//GEN-LAST:event_savebtnActionPerformed
 
     private void EditBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditBtnActionPerformed
+        
         if (imgPath != null) {
+        
             try {
                 InputStream img = new FileInputStream(imgPath);
                 String UpdateQuery = "Update MovieTbl set MName=?,Director=?,Price=?,Qty=?,Cover=? where MId=?";
@@ -505,13 +519,12 @@ public class Movies extends javax.swing.JFrame {
         }
     }
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-        if (Key == 0) 
-        {
+        if (Key == 0) {
             JOptionPane.showMessageDialog(this, "Select a Movie!!!");
         } else {
             try {
                 Con = DriverManager.getConnection("jdbc:mysql://localhost:3306/videoclubdb", "root", "");
-                String Query = "delete from MovieTbl where MId ="+Key;
+                String Query = "delete from MovieTbl where MId =" + Key;
                 Statement Del = Con.createStatement();
                 Del.executeUpdate(Query);
                 JOptionPane.showMessageDialog(this, "Movie Deleted!!!");
@@ -545,8 +558,8 @@ public class Movies extends javax.swing.JFrame {
         PriceTb.setText("");
         QtyTb.setText("");
         BCover.setIcon(null);
-        
-        
+
+
     }//GEN-LAST:event_FilterBtnActionPerformed
 
     /**
@@ -604,6 +617,7 @@ public class Movies extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

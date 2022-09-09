@@ -1,4 +1,4 @@
-package libraryjavatuto;
+package videoclub;
 
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -408,7 +408,6 @@ public class ReturnMovies extends javax.swing.JFrame {
             String Query = "delete from IssueTbl where INum =" + RentId;
             Statement Del = Con.createStatement();
             Del.executeUpdate(Query);
-         
 
         } catch (Exception e) {
         }
@@ -457,7 +456,7 @@ public class ReturnMovies extends javax.swing.JFrame {
                 Save.setString(6, RentDate);
                 int row = Save.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Book Returned!!!");
-                Con.close();
+                //                Con.close();
                 UpdateΜovie();
                 DeleteRental();
                 DisplayReturn();

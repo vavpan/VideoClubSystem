@@ -1,4 +1,4 @@
-package libraryjavatuto;
+package videoclub;
 
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -65,7 +65,7 @@ public class IssueMovies extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        SaveBtn = new javax.swing.JButton();
+        BorrowBtn = new javax.swing.JButton();
         EditBtn = new javax.swing.JButton();
         DeleteBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -134,12 +134,12 @@ public class IssueMovies extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(51, 0, 51));
         jLabel7.setText("Date");
 
-        SaveBtn.setFont(new java.awt.Font("ABeeZee", 0, 14)); // NOI18N
-        SaveBtn.setForeground(new java.awt.Color(204, 0, 51));
-        SaveBtn.setText("Borrow");
-        SaveBtn.addActionListener(new java.awt.event.ActionListener() {
+        BorrowBtn.setFont(new java.awt.Font("ABeeZee", 0, 14)); // NOI18N
+        BorrowBtn.setForeground(new java.awt.Color(204, 0, 51));
+        BorrowBtn.setText("Borrow");
+        BorrowBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveBtnActionPerformed(evt);
+                BorrowBtnActionPerformed(evt);
             }
         });
 
@@ -269,7 +269,7 @@ public class IssueMovies extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(SaveBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BorrowBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(MovieTb, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(26, 26, 26)
@@ -323,7 +323,7 @@ public class IssueMovies extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BorrowBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(EditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(24, 24, 24)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -390,14 +390,14 @@ public class IssueMovies extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }
-    private void SaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBtnActionPerformed
+    private void BorrowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrowBtnActionPerformed
         CountBorrowed();
         if (MovieTb.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a Movie!!!");
         } else if (AvailMovie == 0) {
             JOptionPane.showMessageDialog(this, "Movie Not Available!!!");
         } else if (Borrowed >= 3) {
-            JOptionPane.showMessageDialog(this, "3 Movies Pending!!!");
+            JOptionPane.showMessageDialog(this, "Can't borrow more than 3 movies!!!");
         } else {
             try {
                 CountRental();
@@ -419,12 +419,14 @@ public class IssueMovies extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, ex);
             }
         }
-    }//GEN-LAST:event_SaveBtnActionPerformed
+    }//GEN-LAST:event_BorrowBtnActionPerformed
 
     private void EditBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditBtnActionPerformed
         //Reset Code
         MovieTb.setText("");
         MovieId = -1;
+        BDate.setDate(null);
+       
     }//GEN-LAST:event_EditBtnActionPerformed
     private void UpdateMovie() {
         try {
@@ -516,13 +518,13 @@ public class IssueMovies extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser BDate;
+    private javax.swing.JButton BorrowBtn;
     private javax.swing.JComboBox CstIdCb;
     private javax.swing.JButton DeleteBtn;
     private javax.swing.JButton EditBtn;
     private javax.swing.JTable MovieTable;
     private javax.swing.JTextField MovieTb;
     private javax.swing.JTable RentalTable;
-    private javax.swing.JButton SaveBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

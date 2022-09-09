@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package libraryjavatuto;
+package videoclub;
 
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
@@ -56,7 +56,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         jLabel4.setText("Admin Login");
 
         PasswordTb.setFont(new java.awt.Font("ABeeZee", 0, 14)); // NOI18N
-        PasswordTb.setForeground(new java.awt.Color(255, 204, 204));
+        PasswordTb.setForeground(new java.awt.Color(51, 51, 51));
         PasswordTb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordTbActionPerformed(evt);

@@ -1,4 +1,4 @@
-package libraryjavatuto;
+package videoclub;
 
 import java.awt.Toolkit;
 import java.sql.Connection;
@@ -48,7 +48,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("ABeeZee", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/libraryjavatuto/3e639f82a7f72837979d3af25bef3185_1.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/videoclub/3e639f82a7f72837979d3af25bef3185_1.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
@@ -123,7 +123,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("ABeeZee", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/libraryjavatuto/Close_32px.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/videoclub/Close_32px.png"))); // NOI18N
         jLabel8.setText("X");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

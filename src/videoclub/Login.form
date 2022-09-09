@@ -147,7 +147,7 @@
               <Color blue="33" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/libraryjavatuto/3e639f82a7f72837979d3af25bef3185_1.png"/>
+              <Image iconType="3" name="/videoclub/3e639f82a7f72837979d3af25bef3185_1.png"/>
             </Property>
           </Properties>
           <Events>
@@ -256,7 +256,7 @@
           <Color blue="33" green="0" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/libraryjavatuto/Close_32px.png"/>
+          <Image iconType="3" name="/videoclub/Close_32px.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="X"/>
       </Properties>
