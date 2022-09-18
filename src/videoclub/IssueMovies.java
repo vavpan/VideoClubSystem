@@ -88,7 +88,7 @@ public class IssueMovies extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("ABeeZee", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel1.setText("Library Management System");
+        jLabel1.setText("Video Management System");
 
         jLabel2.setFont(new java.awt.Font("ABeeZee", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));

@@ -14,7 +14,8 @@ import java.awt.Toolkit;
  *
  * @author afwadmin
  */
-public class Splash extends javax.swing.JFrame {
+public class
+Splash extends javax.swing.JFrame {
 
     /**
      * Creates new form Splash
@@ -52,8 +53,8 @@ public class Splash extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VideoClub Management System");
 
-        Myprogress.setBackground(new java.awt.Color(255, 255, 0));
-        Myprogress.setForeground(new java.awt.Color(255, 255, 255));
+        Myprogress.setBackground(new java.awt.Color(255, 196, 0));
+        Myprogress.setForeground(new java.awt.Color(194, 14, 14));
         Myprogress.setBorderPainted(false);
 
         Percentage.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
