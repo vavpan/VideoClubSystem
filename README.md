@@ -1,3 +1,2 @@
-# VideoClubSystem
+# VideoClub Management System Using Java
 
-VideoClub Management System Using Java
