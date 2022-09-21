@@ -439,7 +439,7 @@ public class ReturnMovies extends javax.swing.JFrame {
     private void ReturnBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnBtnActionPerformed
 
         if (RentId == -1) {
-            JOptionPane.showMessageDialog(this, "Select a Book To Return!!!");
+            JOptionPane.showMessageDialog(this, "Select a Movie To Return!!!");
         } else {
             CountReturn();
             try {
@@ -455,7 +455,7 @@ public class ReturnMovies extends javax.swing.JFrame {
                 String RentDate = RentDateTb.getText();
                 Save.setString(6, RentDate);
                 int row = Save.executeUpdate();
-                JOptionPane.showMessageDialog(this, "Book Returned!!!");
+                JOptionPane.showMessageDialog(this, "Movie Returned!!!");
                 //                Con.close();
                 UpdateΜovie();
                 DeleteRental();
