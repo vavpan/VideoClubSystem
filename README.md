@@ -67,5 +67,5 @@ Afterwards, you can use either Netbeans(preferable) or Intellij to import the co
 User: Peter Password: 555 <br>
 User: Nicole Password: 222
 
-To login as admin:
+To login as admin: <br>
 Password: password
