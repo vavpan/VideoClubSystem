@@ -177,7 +177,7 @@ public class Movies extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(51, 0, 0));
         jLabel7.setText("Quantity");
 
-        BCover.setText("BookCover");
+        BCover.setText("MovieCover");
 
         BrowseBtn.setText("Browse");
         BrowseBtn.addActionListener(new java.awt.event.ActionListener() {

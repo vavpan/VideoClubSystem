@@ -72,7 +72,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel3.setFont(new java.awt.Font("Century Schoolbook", 3, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Century Movie", 3, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 0));
         jLabel3.setText("Video Club System");
 
