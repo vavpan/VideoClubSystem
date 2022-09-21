@@ -146,7 +146,7 @@ ALTER TABLE `employeetbl`
 ALTER TABLE `issuetbl`
   ADD PRIMARY KEY (`INum`),
   ADD KEY `CustId` (`CstId`),
-  ADD KEY `BookIssued` (`MovieIssued`);
+  ADD KEY `MovieIssued` (`MovieIssued`);
 
 --
 -- Ευρετήρια για πίνακα `movietbl`
