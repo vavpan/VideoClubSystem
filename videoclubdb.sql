@@ -117,9 +117,9 @@ INSERT INTO `movietbl` (`MId`, `MName`, `Director`, `Price`, `Qty`, `Cover`) VAL
 
 CREATE TABLE `returntbl` (
   `RetNum` int(11) NOT NULL,
-  `StdId` int(11) DEFAULT NULL,
-  `BookRet` int(11) DEFAULT NULL,
-  `Librarian` int(11) DEFAULT NULL,
+  `CustId` int(11) DEFAULT NULL,
+  `MovieRet` int(11) DEFAULT NULL,
+  `Employee` int(11) DEFAULT NULL,
   `RetDate` varchar(50) DEFAULT NULL,
   `IssueDate` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -145,7 +145,7 @@ ALTER TABLE `employeetbl`
 --
 ALTER TABLE `issuetbl`
   ADD PRIMARY KEY (`INum`),
-  ADD KEY `StdId` (`CstId`),
+  ADD KEY `CustId` (`CstId`),
   ADD KEY `BookIssued` (`MovieIssued`);
 
 --
@@ -159,9 +159,9 @@ ALTER TABLE `movietbl`
 --
 ALTER TABLE `returntbl`
   ADD PRIMARY KEY (`RetNum`),
-  ADD KEY `StdId` (`StdId`),
-  ADD KEY `BookRet` (`BookRet`),
-  ADD KEY `Librarian` (`Librarian`);
+  ADD KEY `CustId` (`CustId`),
+  ADD KEY `MovieRet` (`MovieRet`),
+  ADD KEY `Employee` (`Employee`);
 
 --
 -- Περιορισμοί για άχρηστους πίνακες
@@ -178,9 +178,9 @@ ALTER TABLE `issuetbl`
 -- Περιορισμοί για πίνακα `returntbl`
 --
 ALTER TABLE `returntbl`
-  ADD CONSTRAINT `returntbl_ibfk_1` FOREIGN KEY (`StdId`) REFERENCES `customertbl` (`CustId`),
-  ADD CONSTRAINT `returntbl_ibfk_2` FOREIGN KEY (`BookRet`) REFERENCES `movietbl` (`MId`),
-  ADD CONSTRAINT `returntbl_ibfk_3` FOREIGN KEY (`Librarian`) REFERENCES `employeetbl` (`EmpId`);
+  ADD CONSTRAINT `returntbl_ibfk_1` FOREIGN KEY (`CustId`) REFERENCES `customertbl` (`CustId`),
+  ADD CONSTRAINT `returntbl_ibfk_2` FOREIGN KEY (`MovieRet`) REFERENCES `movietbl` (`MId`),
+  ADD CONSTRAINT `returntbl_ibfk_3` FOREIGN KEY (`Employee`) REFERENCES `employeetbl` (`EmpId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
