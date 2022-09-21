@@ -62,3 +62,10 @@
 Afterwards, you can use either Netbeans(preferable) or Intellij to import the code and run it.
   Go to splash.java -> right click -> run file.
 </p>
+
+
+User: Peter Password: 555 <br>
+User: Nicole Password: 222
+
+To login as admin:
+Password: password
